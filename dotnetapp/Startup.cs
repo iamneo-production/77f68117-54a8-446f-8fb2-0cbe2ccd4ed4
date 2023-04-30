@@ -2,14 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-///
-using dotnetapp.Context;
-using dotnetapp.Core;
-using dotnetapp.Core.Interfaces;
-using NLog;
-
-//using Microsoft.AspNetCore.Authentication.JwtBearer;
-///
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -22,6 +14,9 @@ using Microsoft.OpenApi.Models;
 using dotnetapp.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
+using dotnetapp.Core.Interfaces;
+using dotnetapp.Core;
+using dotnetapp.Context;
 
 namespace dotnetapp
 {
@@ -39,11 +34,13 @@ namespace dotnetapp
         {
             string connectionString = Configuration.GetConnectionString("myconnstring");
             services.AddDbContext<EducationLoanContext>(opt => opt.UseSqlServer(connectionString));
-           // services.AddScoped<IProductService, ProductService>();
-            services.AddCors();
-            services.AddScoped<IUser, UserServices>(); 
+            //services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IDocument, DocumentCore>();
             services.AddScoped<ILoan, LoanServices>();
+            services.AddScoped<IUser, UserServices>();
+            //services.AddScoped<IAuthentication, AuthenticationCore>();
+            services.AddCors();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -64,8 +61,7 @@ namespace dotnetapp
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            //app.Authentication();
+           // app.UseAthentication();
 
             app.UseAuthorization();
 
