@@ -21,7 +21,11 @@
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
+<<<<<<< HEAD
           "lib/netstandard2.0/_._": {
+=======
+          "lib/netstandard2.0/Humanizer.dll": {
+>>>>>>> ce8665c87d36bb2bf5997e3d7212fca6efe7b14a
             "related": ".xml"
           }
         },
@@ -2898,8 +2902,11 @@
             "version": "[6.0.16, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
+<<<<<<< HEAD
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+=======
+>>>>>>> ce8665c87d36bb2bf5997e3d7212fca6efe7b14a
             "target": "Package",
             "version": "[6.0.16, )"
           },

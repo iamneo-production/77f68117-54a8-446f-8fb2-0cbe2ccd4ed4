@@ -2,6 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+<<<<<<< HEAD
+=======
+///
+using dotnetapp.Context;
+using dotnetapp.Core;
+using dotnetapp.Core.Interfaces;
+using NLog;
+
+//using Microsoft.AspNetCore.Authentication.JwtBearer;
+///
+>>>>>>> ce8665c87d36bb2bf5997e3d7212fca6efe7b14a
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -14,9 +25,12 @@ using Microsoft.OpenApi.Models;
 using dotnetapp.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
+<<<<<<< HEAD
 using dotnetapp.Context;
 using dotnetapp.Core.Interfaces;
 using dotnetapp.Core;
+=======
+>>>>>>> ce8665c87d36bb2bf5997e3d7212fca6efe7b14a
 
 namespace dotnetapp
 {
@@ -34,10 +48,18 @@ namespace dotnetapp
         {
             string connectionString = Configuration.GetConnectionString("myconnstring");
             services.AddDbContext<EducationLoanContext>(opt => opt.UseSqlServer(connectionString));
+<<<<<<< HEAD
             //services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ILoan, LoanServices>();
             services.AddCors();
 
+=======
+           // services.AddScoped<IProductService, ProductService>();
+            services.AddCors();
+            services.AddScoped<IUser, UserServices>(); 
+            services.AddScoped<IDocument, DocumentCore>();
+            services.AddScoped<ILoan, LoanServices>();
+>>>>>>> ce8665c87d36bb2bf5997e3d7212fca6efe7b14a
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -59,6 +81,11 @@ namespace dotnetapp
 
             app.UseRouting();
 
+<<<<<<< HEAD
+=======
+            //app.Authentication();
+
+>>>>>>> ce8665c87d36bb2bf5997e3d7212fca6efe7b14a
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

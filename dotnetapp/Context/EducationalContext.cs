@@ -9,11 +9,19 @@ namespace dotnetapp.Context
     {
         public EducationLoanContext(DbContextOptions<EducationLoanContext> options) : base(options) { }
 
+<<<<<<< HEAD
         public DbSet<UserModel> userModels { get; set; }
         public DbSet<AdminModel> adminModels { get; set; }
 
         public DbSet<LoanApplicantModel> loansApplicantModels { get; set; }
         public DbSet<DocumentModel> documentModels { get; set; }
+=======
+        public DbSet<UserModel>? userModels { get; set; }
+        public DbSet<AdminModel>? adminModels { get; set; }
+
+        public DbSet<LoanApplicantModel>? loansApplicantModels { get; set; }
+        public DbSet<DocumentModel>? documentModels { get; set; }
+>>>>>>> ce8665c87d36bb2bf5997e3d7212fca6efe7b14a
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

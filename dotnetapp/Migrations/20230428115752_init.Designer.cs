@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dotnetapp.Context;
 
@@ -11,9 +12,10 @@ using dotnetapp.Context;
 namespace dotnetapp.Migrations
 {
     [DbContext(typeof(EducationLoanContext))]
-    partial class EducationLoanContextModelSnapshot : ModelSnapshot
+    [Migration("20230428115752_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -102,12 +104,6 @@ namespace dotnetapp.Migrations
                     b.Property<string>("LoanType")
                         .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-                    b.Property<string>("Status")
-                        .HasColumnType("nvarchar(max)");
-
-=======
->>>>>>> ce8665c87d36bb2bf5997e3d7212fca6efe7b14a
                     b.HasKey("LoanId");
 
                     b.ToTable("loansApplicantModels");
