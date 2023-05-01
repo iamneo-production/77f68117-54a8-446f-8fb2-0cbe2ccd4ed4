@@ -1,0 +1,129 @@
+<app-customernav></app-customernav>
+<br><br>
+<!-- <div class="div3"> </div> -->
+<div class="div2">
+  <div class="container">
+
+    <form (ngSubmit)="onSubmit()" #applicantForm="ngForm" class="border">
+      <div class="col-md-8 offset-md-1">
+
+        <div class=" text-center ">
+          <span class="font3"><b>>--- Loan Application Form ---</b></span>
+          <br><br>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="name"><b>Loan Type :</b></label>
+              <input type="text" class="form-control" id="name" [(ngModel)]="applicant.loanType" name="loanType"
+                placeholder="Enter Loan Type">
+            </div>
+          </div>
+
+          <br>
+          <div class="col">
+            <div class="form-group">
+              <label for="name"><b>Applicant Name :</b></label>
+              <input type="text" class="form-control" id="name" required [(ngModel)]="applicant.ApplicantName"
+                name="name" placeholder="Enter Your Name" required="mark">
+              <br>
+            </div>
+          </div>
+        </div>
+       
+
+        <div class="row">
+          <div class="col">
+          <div class="form-group">
+            <label for="name"><b>Applicant Address :</b></label>
+            <input type="text" class="form-control" id="address" required [(ngModel)]="applicant.ApplicantAddress"
+              name="address" placeholder="Enter Your Address">
+            <br>
+          </div>
+          </div>
+          <div class="col">
+          <div class="form-group">
+            <label for="name"><b>Applicant Email :</b></label>
+
+            <input type="text" class="form-control" id="mobile" required [(ngModel)]="applicant.ApplicantEmail"
+              name="mobile" placeholder="Enter Your Email id (eg: xxxxxxx@xxxx.com)">
+          </div></div>
+            <br>
+          </div>
+
+          <div class="row">
+            <div class="col">
+          <div class="form-group">
+            <label for="name"><b>Applicant Mobile :</b></label>
+            <input type="email" class="form-control" id="email" required [(ngModel)]="applicant.ApplicantMobile"
+              name="email" placeholder="Enter Your 10 digit Mobile Number (xxxxxxxxxx)">
+            <br>
+
+          </div>
+            </div>
+            <div class="col">
+          <div class="form-group">
+            <label for="name"><b>Applicant Aadhaar Number :</b></label>
+            <input type="text" class="form-control" id="adhaar" required [(ngModel)]="applicant.ApplicantAdhaar"
+              name="adhaar" placeholder="Enter Your 12 digit Aadhaar Number (xxxxxxxxxxxx)">
+            <br>
+          </div>
+            </div></div>
+
+            <div class="row">
+              <div class="col">
+          <div class="form-group">
+            <label for="name"><b>Applicant Pan Number :</b></label>
+            <input type="text" class="form-control" id="pan" required [(ngModel)]="applicant.ApplicantPan" name="pan"
+              placeholder="Enter Your 10 digit PAN Number (xxxxxxxxxx)">
+            <br>
+          </div>
+              </div>
+              <div class="col">
+          <div class="form-group">
+            <label for="name"><b>Applicant Salary :</b></label>
+            <input type="text" class="form-control" id="salary" required [(ngModel)]="applicant.ApplicantSalary"
+              name="salary" placeholder="Enter Your Salary" required="mark">
+            <br>
+          </div>
+          </div></div>
+
+          <div class="row">
+            <div class="col">
+          <div class="form-group">
+            <label for="name"><b>Loan Amount Required :</b></label>
+            <input type="text" class="form-control" id="loanAmount" required [(ngModel)]="applicant.LoanAmountRequired"
+              name="loanAmount" placeholder="Enter Loan Amount Required">
+            <br>
+          </div>
+</div>
+<div class="col">
+          <div class="form-group">
+            <label for="name"><b>Loan Repayment Months:</b></label>
+            <input type="text" class="form-control" id="repaymentMonths" required
+              [(ngModel)]="applicant.LoanRepaymentMonths" name="repaymentMonths"
+              placeholder="Enter Your Repayment Months" required="mark">
+            <br>
+          </div>
+          </div></div>
+          <p class= "font"> >>>> Fill all the fields and press submit >>>> </p>
+          <div class="col-6 offset-3">
+            <div class="d-grid m-4">
+              <button type="submit" class="btn btn-primary " [disabled]="!applicantForm.valid" >submit</button>
+            </div>
+          </div>
+          <p class="font2"> For Submitt the Document Press the Next Button </p> 
+          <div class="col-6 offset-3">
+            <div class="d-grid m-4">
+              <button type="button" [disabled]="!applicantForm.valid" routerLink="fileupload" class="btn btn-success">Next</button>
+            </div>
+          </div>
+       
+      </div>
+
+    </form>
+  </div>
+
+</div>
+

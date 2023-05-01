@@ -1,0 +1,52 @@
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+
+<div class="bg-img">
+<div class="container">
+    <div class="row">
+    <div class="col-md-6 mx-auto">
+    <h2 class="text-center mb-4" style="color: azure; padding-top: 10px;">Register</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+
+    <label for="useradmin" style="color: azure;">Enter Customer/Admin:</label>
+  <select class="form-control" formControlName="UserRole" ngClass="{'is-invalid':submitted&&registerForm.controls.userrole.errors}" id="user" name="user" required placeholder="Customer/Admin">
+    <option value="user">Customer</option>
+    <option value="admin">Admin</option>
+  </select>
+    </div>
+    <div class="form-group">
+    <label for="email" style="color: azure;">Email address</label>
+    <input  type="text" class="form-control" formControlName="Email" id="email" placeholder="Enter email" required>
+    <!-- <span class="text-danger" *ngIf="this.onSubmit&&this.registerForm.get('Email')?.errors?.['minlength']"></span>
+
+    <div *ngIf="this.registerForm.get('Email')?.errors && this.registerForm.get('Email')?.errors?.['required']" class="form-text text-danger">
+
+        Email is required.
+        
+         </div> -->
+    </div>
+    
+
+    <div class="form-group">
+    <label for="username" style="color: azure;">Username</label>
+    <input type="text" class="form-control" formControlName="UserName" id="username" placeholder="Enter Username" required>  
+    </div>
+    <div class="form-group">
+        <label for="mobilenumber" style="color: azure;">Mobile Number</label>
+        <input type="text" class="form-control" formControlName="MobileNumber" id="mobileNumber" placeholder="Enter Mobile Number" required>
+        </div>
+    <div class="form-group">
+        <label for="password" style="color: azure;">Password</label>
+        <input type="password" class="form-control" formControlName="Password" id="password" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+            <label for="password" style="color: rgb(42, 74, 74);">Confirm Password</label>
+            <input type="password" class="form-control" formControlName="Password" id="ConfirmPassword" placeholder="Confirm Password" required>
+        </div>
+    <button id="submitButton" type="submit" class="btn btn-primary" style="margin-top: 10px;" >Register </button>
+    <p style="color: rgb(5, 26, 26);">Already User? <a id="siginLink" routerLink=''>Login</a></p>
+    </form>
+    </div>
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,20 @@
+<app-adminnav></app-adminnav>
+<router-outlet></router-outlet>
+
+<div class="container">
+    <div class="col ">
+        <ng-container *ngFor="let loan of newData">
+            <div class="grid-container" >
+                <p class="grid-item"><strong>Applicant Name : </strong>{{loan.applicantName}}</p>
+                <p class="grid-item"><strong>Applicant Email : </strong>{{loan.applicantEmail}}</p>
+            <p class="grid-item"><strong>Applicant Address : </strong>{{loan.applicantAddress}}</p>
+        <p class="grid-item"> <strong>Applicant PhoneNumber : </strong>{{loan.applicantMobile}}</p>
+                <p class="grid-item"><strong>Applicant Pan : </strong>{{loan.applicantPan}}</p>
+                <p class="grid-item"><strong>Applicant Adhaar : </strong>{{loan.applicantAdhaar}}</p>
+                <p class="grid-item"><strong>Applicant LoanId : </strong>{{loan.loanId}}</p>
+                <p class="grid-item"><strong>Loan Amount : </strong>{{loan.loanAmountRequired}}</p>
+                <p class="grid-item"><strong>Loan Status : </strong>{{loan.status}}</p>
+            </div>
+        </ng-container>
+    </div>
+</div>

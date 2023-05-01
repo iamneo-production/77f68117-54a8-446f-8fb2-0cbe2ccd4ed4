@@ -1,0 +1,29 @@
+<app-customernav></app-customernav>
+<div class="file-uplaod-container" style="text-align: center; padding-top: 10%;">
+
+<h2>Upload File</h2>
+<div class="file-drop" (drop)="onFileDropped($event)" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)">
+    <div class="drag-and-drop">
+        <div class="drag-icon">
+            <i class="fa fa-cloud-upload fa-4x"></i>
+        </div>
+<div class="drag-text" style="padding: 3%;">Drag and drop file here / upload only 2MB </div>
+<div class="browse-button-container">>
+<button class="browse-button" type="button" (click)="fileInput.click()" style="padding: 7px; margin-bottom: 10px;">Select your File</button>
+
+<input type="file" (change)="fileChange($event)" #fileInput hidden>
+
+</div>
+</div>
+<div class="file-info" *ngIf="fileData" >
+<div class="file-name">{{ filename }}</div>
+<div class="file-size">{{ formmatFileSize(fileData.size) }}</div>
+<button class="remove-button" type="button" (click)="removeFile() " style="padding: 4px;">Remove</button>
+</div>
+<div class="progress-container" *ngIf="showProgress">
+<div class="progress-bar"></div>
+</div>
+</div>
+<div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
+<button class="upload-button" type="button" [disabled]="!fileData || showProgress" (click)="uploadFile()">Upload</button>
+</div>
