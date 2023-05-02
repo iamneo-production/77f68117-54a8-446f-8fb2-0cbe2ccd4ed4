@@ -1,0 +1,27 @@
+.container{
+    margin-bottom: 20px ;
+}
+.div{
+    margin-bottom: 40px;
+    background-color:rgb(182, 187, 192);
+    width: 100%;
+     /* display:inline-block; */
+    /* word-wrap: break-word; */
+}
+p{
+    display: inline-flex;
+}
+.grid-item{
+    /* display: grid; */
+    padding: 8px;
+    font-size: medium;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-bottom: 10px;
+    width: 1100px;
+    background-color: beige;
+    margin: 30px;
+    left: auto;
+}
