@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+.bg-img{
+    background-image: url("https://wallpaper.dog/large/20526938.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
