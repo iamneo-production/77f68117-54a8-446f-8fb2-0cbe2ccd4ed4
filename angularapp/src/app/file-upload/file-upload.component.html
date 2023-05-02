@@ -2,7 +2,7 @@
 <div class="file-uplaod-container" style="text-align: center; padding-top: 10%;">
 
 <h2>Upload File</h2>
-<div class="file-drop" (drop)="onFileDropped($event)" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)">
+<div class="file-drop" (drop)="onFileDropped($event)" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" id="chooseFile">
     <div class="drag-and-drop">
         <div class="drag-icon">
             <i class="fa fa-cloud-upload fa-4x"></i>
@@ -25,5 +25,5 @@
 </div>
 </div>
 <div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
-<button class="upload-button" type="button" [disabled]="!fileData || showProgress" (click)="uploadFile()">Upload</button>
+<button class="upload-button" type="button" [disabled]="!fileData || showProgress" (click)="uploadFile()" id="uploadDocumentsButton">Upload</button>
 </div>

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="col ">
         <ng-container *ngFor="let loan of newData">
-            <div class="grid-container" >
+            <div class="grid-container" id="adminDetailsGrid1">
                 <p class="grid-item"><strong>Applicant Name : </strong>{{loan.applicantName}}</p>
                 <p class="grid-item"><strong>Applicant Email : </strong>{{loan.applicantEmail}}</p>
                 <p class="grid-item"><strong>Applicant Address : </strong>{{loan.applicantAddress}}</p>
@@ -15,8 +15,8 @@
                 <p class="grid-item"><strong>Loan Amount : </strong>{{loan.loanAmountRequired}}</p>
 
 
-                <button (click)="approveloan(loan.loanId)" class="btn btn-success grid-item" style="width: fit-content; font-size: small;">Approve</button>
-                <button (click)="rejectloan(loan.loanId)" class="btn btn-danger grid-item" style="width: fit-content; font-size: small;">Reject</button>
+                <button (click)="approveloan(loan.loanId)" class="btn btn-success grid-item" style="width: fit-content; font-size: small;" id="adminApproveLoan">Approve</button>
+                <button (click)="rejectloan(loan.loanId)" class="btn btn-danger grid-item" style="width: fit-content; font-size: small;" id="adminRejectLoan">Reject</button>
             </div>
         </ng-container>
     </div>

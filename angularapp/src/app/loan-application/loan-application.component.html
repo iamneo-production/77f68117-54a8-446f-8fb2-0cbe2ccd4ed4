@@ -25,7 +25,7 @@
           <div class="col">
             <div class="form-group">
               <label for="name"><b>Applicant Name :</b></label>
-              <input type="text" class="form-control" id="name" required [(ngModel)]="applicant.ApplicantName"
+              <input type="text" class="form-control" id="enterName" required [(ngModel)]="applicant.ApplicantName"
                 name="name" placeholder="Enter Your Name" required="mark">
               <br>
             </div>
@@ -37,7 +37,7 @@
           <div class="col">
           <div class="form-group">
             <label for="name"><b>Applicant Address :</b></label>
-            <input type="text" class="form-control" id="address" required [(ngModel)]="applicant.ApplicantAddress"
+            <input type="text" class="form-control" id="enterAddress" required [(ngModel)]="applicant.ApplicantAddress"
               name="address" placeholder="Enter Your Address">
             <br>
           </div>
@@ -46,7 +46,7 @@
           <div class="form-group">
             <label for="name"><b>Applicant Email :</b></label>
 
-            <input type="text" class="form-control" id="mobile" required [(ngModel)]="applicant.ApplicantEmail"
+            <input type="text" class="form-control" id="enterEmail" required [(ngModel)]="applicant.ApplicantEmail"
               name="mobile" placeholder="Enter Your Email id (eg: xxxxxxx@xxxx.com)">
           </div></div>
             <br>
@@ -56,7 +56,7 @@
             <div class="col">
           <div class="form-group">
             <label for="name"><b>Applicant Mobile :</b></label>
-            <input type="email" class="form-control" id="email" required [(ngModel)]="applicant.ApplicantMobile"
+            <input type="email" class="form-control" id="enterMobile" required [(ngModel)]="applicant.ApplicantMobile"
               name="email" placeholder="Enter Your 10 digit Mobile Number (xxxxxxxxxx)">
             <br>
 
@@ -65,7 +65,7 @@
             <div class="col">
           <div class="form-group">
             <label for="name"><b>Applicant Aadhaar Number :</b></label>
-            <input type="text" class="form-control" id="adhaar" required [(ngModel)]="applicant.ApplicantAdhaar"
+            <input type="text" class="form-control" id="enterAdhaarNo" required [(ngModel)]="applicant.ApplicantAdhaar"
               name="adhaar" placeholder="Enter Your 12 digit Aadhaar Number (xxxxxxxxxxxx)">
             <br>
           </div>
@@ -75,7 +75,7 @@
               <div class="col">
           <div class="form-group">
             <label for="name"><b>Applicant Pan Number :</b></label>
-            <input type="text" class="form-control" id="pan" required [(ngModel)]="applicant.ApplicantPan" name="pan"
+            <input type="text" class="form-control" id="enterPanNo" required [(ngModel)]="applicant.ApplicantPan" name="pan"
               placeholder="Enter Your 10 digit PAN Number (xxxxxxxxxx)">
             <br>
           </div>
@@ -83,7 +83,7 @@
               <div class="col">
           <div class="form-group">
             <label for="name"><b>Applicant Salary :</b></label>
-            <input type="text" class="form-control" id="salary" required [(ngModel)]="applicant.ApplicantSalary"
+            <input type="text" class="form-control" id="enterSalary" required [(ngModel)]="applicant.ApplicantSalary"
               name="salary" placeholder="Enter Your Salary" required="mark">
             <br>
           </div>
@@ -93,7 +93,7 @@
             <div class="col">
           <div class="form-group">
             <label for="name"><b>Loan Amount Required :</b></label>
-            <input type="text" class="form-control" id="loanAmount" required [(ngModel)]="applicant.LoanAmountRequired"
+            <input type="text" class="form-control" id="enterAmount" required [(ngModel)]="applicant.LoanAmountRequired"
               name="loanAmount" placeholder="Enter Loan Amount Required">
             <br>
           </div>
@@ -101,7 +101,7 @@
 <div class="col">
           <div class="form-group">
             <label for="name"><b>Loan Repayment Months:</b></label>
-            <input type="text" class="form-control" id="repaymentMonths" required
+            <input type="text" class="form-control" id="enterMonths" required
               [(ngModel)]="applicant.LoanRepaymentMonths" name="repaymentMonths"
               placeholder="Enter Your Repayment Months" required="mark">
             <br>
@@ -110,7 +110,7 @@
           <p class= "font"> >>>> Fill all the fields and press submit >>>> </p>
           <div class="col-6 offset-3">
             <div class="d-grid m-4">
-              <button type="submit" class="btn btn-primary " [disabled]="!applicantForm.valid" >submit</button>
+              <button type="submit" class="btn btn-primary " [disabled]="!applicantForm.valid" id="applyLoanButton" >submit</button>
             </div>
           </div>
           <p class="font2"> For Submitt the Document Press the Next Button </p> 
